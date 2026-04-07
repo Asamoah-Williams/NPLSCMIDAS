@@ -1,0 +1,15 @@
+{
+  "run_ts_utc": "2026-03-02T14:45:05+00:00",
+  "run_id": "20260302T144505+0000",
+  "gates_ok": true,
+  "saved": [
+    "lgbm_midas_h0.pkl",
+    "lgbm_midas_h1.pkl",
+    "lgbm_midas_h2.pkl",
+    "sc_midas_ols_h3.json",
+    "sc_midas_ols_h4.json",
+    "sc_midas_ols_h5.json",
+    "sc_midas_ols_h6.json"
+  ],
+  "promoted_to": "D:\\NPL Project\\AI Project\\data\\interim\\models\\approved\\run_20260302T144505+0000"
+}

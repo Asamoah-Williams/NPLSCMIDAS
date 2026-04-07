@@ -1,0 +1,7 @@
+Snapshot by horizon (last 36m with actuals)
+h=1: MAE 0.75pp, RMSE 0.96pp, SMAPE 3.46%, MASE 0.93, R²_log 0.94
+h=2: MAE 0.98pp, RMSE 1.18pp, SMAPE 4.74%, MASE 1.22, R²_log 0.89
+h=3: MAE 1.40pp, RMSE 1.89pp, SMAPE 6.50%, MASE 1.74, R²_log 0.76
+h=4: MAE 1.44pp, RMSE 1.94pp, SMAPE 6.71%, MASE 1.79, R²_log 0.74
+h=5: MAE 1.54pp, RMSE 2.10pp, SMAPE 7.15%, MASE 1.91, R²_log 0.70
+h=6: MAE 1.63pp, RMSE 2.10pp, SMAPE 7.73%, MASE 2.03, R²_log 0.69

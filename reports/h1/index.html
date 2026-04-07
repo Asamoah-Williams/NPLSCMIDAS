@@ -1,0 +1,60 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8"/>
+  <title>Monitoring — Horizon h=1</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1"/>
+  <style>
+    body { font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Arial, sans-serif; margin: 16px; }
+    h1, h2, h3 { margin: 0.6em 0 0.4em; }
+    table { border-collapse: collapse; width: 100%; }
+    th, td { padding: 6px 8px; border-bottom: 1px solid #eee; text-align: right; }
+    th:first-child, td:first-child { text-align: left; }
+    .pill { display:inline-block; padding:2px 8px; border-radius: 12px; font-size: 12px; }
+    .pill.ok { background:#e8f5e9; color:#2e7d32; }
+    .pill.warn { background:#fff8e1; color:#8d6e63; }
+    .pill.bad { background:#ffebee; color:#c62828; }
+    .meta { color:#666; font-size: 12px; }
+    .grid { display:grid; grid-template-columns: repeat(2, minmax(240px, 1fr)); gap: 16px; }
+    .card { border:1px solid #eee; border-radius: 8px; padding: 12px; }
+    img { max-width: 100%; height: auto; border: 0; }
+    a { color: #1565c0; text-decoration: none; }
+    a:hover { text-decoration: underline; }
+  </style>
+</head>
+<body>
+<h1>Monitoring — Horizon h=1</h1><p class="meta">
+      KPI rows: 128 &middot; Residual rows: 128
+      &middot; Drift rows: 5
+    </p>
+<h2>KPIs (Monthly)</h2>
+<table><thead><tr><th>target_month</th><th>rmse_pp</th><th>mae_pp</th><th>smape</th><th>mase</th><th>r2_log</th><th>n_obs</th><th>train_date</th></tr></thead><tbody><tr><td>2015-02-28</td><td>1.0596374804094442</td><td>1.0596374804094442</td><td>8.859950239137309</td><td>nan</td><td>nan</td><td>1.0</td><td>2026-03-02 14:46:01.460184</td></tr><tr><td>2015-03-31</td><td>1.0701946550920596</td><td>1.0701946550920596</td><td>8.952173096831823</td><td>nan</td><td>nan</td><td>1.0</td><td>2026-03-02 14:46:01.460184</td></tr><tr><td>2015-04-30</td><td>0.9400591188982155</td><td>0.9400591188982155</td><td>7.821020811513367</td><td>nan</td><td>nan</td><td>1.0</td><td>2026-03-02 14:46:01.460184</td></tr><tr><td>2015-05-31</td><td>1.2959579760149165</td><td>1.2959579760149165</td><td>10.944021601912352</td><td>nan</td><td>nan</td><td>1.0</td><td>2026-03-02 14:46:01.460184</td></tr><tr><td>2015-06-30</td><td>1.2967552477434285</td><td>1.2967552477434285</td><td>10.951123006116214</td><td>nan</td><td>nan</td><td>1.0</td><td>2026-03-02 14:46:01.460184</td></tr><tr><td>2015-07-31</td><td>0.04339002062771513</td><td>0.04339002062771513</td><td>0.33094248609269844</td><td>nan</td><td>nan</td><td>1.0</td><td>2026-03-02 14:46:01.460184</td></tr><tr><td>2015-08-31</td><td>0.1336648356693857</td><td>0.1336648356693857</td><td>1.0213829268395092</td><td>nan</td><td>nan</td><td>1.0</td><td>2026-03-02 14:46:01.460184</td></tr><tr><td>2015-09-30</td><td>0.507011964566578</td><td>0.507011964566578</td><td>3.830584019478177</td><td>nan</td><td>nan</td><td>1.0</td><td>2026-03-02 14:46:01.460184</td></tr><tr><td>2015-10-31</td><td>0.5354778046958302</td><td>0.5354778046958302</td><td>3.879010387152966</td><td>nan</td><td>nan</td><td>1.0</td><td>2026-03-02 14:46:01.460184</td></tr><tr><td>2015-11-30</td><td>0.6067145977012931</td><td>0.6067145977012931</td><td>4.390091774571357</td><td>nan</td><td>nan</td><td>1.0</td><td>2026-03-02 14:46:01.460184</td></tr><tr><td>2015-12-31</td><td>0.39292815510895984</td><td>0.39292815510895984</td><td>2.7141258185380703</td><td>nan</td><td>nan</td><td>1.0</td><td>2026-03-02 14:46:01.460184</td></tr><tr><td>2016-01-31</td><td>0.12002220805953101</td><td>0.12002220805953101</td><td>0.8254070209559287</td><td>nan</td><td>nan</td><td>1.0</td><td>2026-03-02 14:46:01.460184</td></tr></tbody></table>
+<h2>Residuals (pp)</h2>
+<table><thead><tr><th>target_month</th><th>residual_pp</th></tr></thead><tbody><tr><td>2015-02-28</td><td>1.0596374804094442</td></tr><tr><td>2015-03-31</td><td>1.0701946550920596</td></tr><tr><td>2015-04-30</td><td>0.9400591188982155</td></tr><tr><td>2015-05-31</td><td>1.2959579760149165</td></tr><tr><td>2015-06-30</td><td>1.2967552477434285</td></tr><tr><td>2015-07-31</td><td>0.04339002062771513</td></tr><tr><td>2015-08-31</td><td>0.1336648356693857</td></tr><tr><td>2015-09-30</td><td>-0.507011964566578</td></tr><tr><td>2015-10-31</td><td>-0.5354778046958302</td></tr><tr><td>2015-11-30</td><td>-0.6067145977012931</td></tr><tr><td>2015-12-31</td><td>-0.39292815510895984</td></tr><tr><td>2016-01-31</td><td>-0.12002220805953101</td></tr></tbody></table>
+<h2>Drift (PSI / Summary)</h2>
+<table><thead><tr><th>metric</th><th>value</th><th>status</th><th>window_start</th><th>window_end</th><th>train_date</th></tr></thead><tbody><tr><td>PSI::NPL</td><td>0.040546510810399755</td><td>OK</td><td>2014-01-31..2016-01-31</td><td>2024-10-31..2025-09-30</td><td>2026-03-02 14:46:01.627840</td></tr><tr><td>PSI::GDP</td><td>23.99171704792967</td><td>ALERT</td><td>2014-01-31..2016-01-31</td><td>2024-10-31..2025-09-30</td><td>2026-03-02 14:46:01.627840</td></tr><tr><td>PSI::DEGU</td><td>14.311819518172914</td><td>ALERT</td><td>2014-01-31..2016-01-31</td><td>2024-10-31..2025-09-30</td><td>2026-03-02 14:46:01.627840</td></tr><tr><td>PSI::CBLR</td><td>6.23546420969415</td><td>ALERT</td><td>2014-01-31..2016-01-31</td><td>2024-10-31..2025-09-30</td><td>2026-03-02 14:46:01.627840</td></tr><tr><td>PSI::GLA</td><td>8.827806522640238</td><td>ALERT</td><td>2014-01-31..2016-01-31</td><td>2024-10-31..2025-09-30</td><td>2026-03-02 14:46:01.627840</td></tr></tbody></table>
+
+<hr/>
+<h2>Forecast Path (t+1..t+6)</h2>
+<p><img src="../charts/forecast_path_latest.png" style="max-width:100%;" alt="Forecast Path">
+   [<a href="../_data/forecast_path.csv">CSV</a>]</p>
+
+<h2>Backtest Heatmap (Abs Error)</h2>
+<p><img src="../charts/backtest_heatmap_abs_error_pp_latest.png" style="max-width:100%;" alt="Backtest Heatmap Abs Error">
+   [<a href="../_data/backtest_heatmap_abs_error_pp.csv">CSV</a>]</p>
+
+<h2>Actual vs Predicted (All Horizons)</h2>
+<p><img src="../charts/actual_vs_pred_latest.png" style="max-width:100%;" alt="Actual vs Predicted">
+   [<a href="../_data/actual_vs_pred.csv">CSV</a>]</p>
+
+<h2>Model Comparison (MASE)</h2>
+<p><img src="../charts/model_comparison_MASE_latest.png" style="max-width:100%;" alt="Model Comparison (MASE)">
+   [<a href="../_data/model_comparison.csv">CSV</a>]</p>
+
+
+<hr/>
+<p class="meta">This report aggregates operational monitoring outputs for the selected horizon.
+See the <a href="../">reports root</a> for other horizons.</p>
+
+</body>
+</html>

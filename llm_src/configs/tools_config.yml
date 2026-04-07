@@ -1,0 +1,31 @@
+primary_agent:
+  llm: gpt-4.1
+  llm_temperature: 1
+
+sqlagent_configs:
+  llm: gpt-4o
+  llm_temperature: 0.0
+
+guiderag_configs:
+  docs: "src\\vectorDocs"
+  collection_name: guide-rag
+  llm: gpt-4.1
+  llm_temperature: 0.0
+  embedding_model: text-embedding-3-small
+  chunk_size: 50
+  chunk_overlap: 10
+  k: 10
+
+tavily_configs:
+  max_results: 2
+
+postgres_db_config:
+  host: 127.0.0.1
+  database: memory_llm
+  user: dbg_llm
+  password: dbgllm
+  port: 5432
+  autocommit: True
+  prepare_threshold: 0
+
+

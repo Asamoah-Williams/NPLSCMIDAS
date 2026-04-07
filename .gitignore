@@ -1,0 +1,144 @@
+# =========================
+
+# Python basics
+
+# =========================
+
+**pycache**/
+*.py[cod]
+*$py.class
+
+# Virtual environments
+
+venv/
+.env/
+.env.*
+.venv/
+ENV/
+env/
+
+# =========================
+
+# Jupyter / Data Science
+
+# =========================
+
+.ipynb_checkpoints/
+*.ipynb_checkpoints
+
+# Jupyter Notebook outputs (optional)
+
+*.nbconvert.ipynb
+
+# =========================
+
+# Data files (SCMIDAS / DS)
+
+# =========================
+
+# Ignore large datasets
+
+data/
+datasets/
+*.csv
+*.xlsx
+*.parquet
+*.feather
+*.h5
+*.hdf5
+
+# Allow small sample data if needed
+
+!data/sample/
+
+# =========================
+
+# Model artifacts (RAG / ML)
+
+# =========================
+
+models/
+checkpoints/
+*.pt
+*.pth
+*.ckpt
+*.onnx
+*.joblib
+*.pkl
+
+# Vector DB / embeddings
+
+chroma/
+faiss_index/
+*.faiss
+*.index
+
+# =========================
+
+# Logs & outputs
+
+# =========================
+
+logs/
+*.log
+outputs/
+results/
+
+# =========================
+
+# API keys / secrets
+
+# =========================
+
+.env
+*.env
+secrets/
+config.yaml
+config.yml
+
+# =========================
+
+# IDEs
+
+# =========================
+
+.vscode/
+.idea/
+
+# =========================
+
+# OS files
+
+# =========================
+
+.DS_Store
+Thumbs.db
+
+# =========================
+
+# Testing & coverage
+
+# =========================
+
+.coverage
+htmlcov/
+.pytest_cache/
+
+# =========================
+
+# Build / packaging
+
+# =========================
+
+build/
+dist/
+*.egg-info/
+
+# =========================
+
+# Misc
+
+# =========================
+
+*.sqlite3
+*.db

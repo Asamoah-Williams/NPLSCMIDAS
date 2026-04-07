@@ -1,0 +1,38 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8"/>
+  <title>Gates — h=5</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1"/>
+  <style>
+    body { font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Arial, sans-serif; margin: 16px; }
+    h1, h2, h3 { margin: 0.6em 0 0.4em; }
+    table { border-collapse: collapse; width: 100%; }
+    th, td { padding: 6px 8px; border-bottom: 1px solid #eee; text-align: right; }
+    th:first-child, td:first-child { text-align: left; }
+    .pill { display:inline-block; padding:2px 8px; border-radius: 12px; font-size: 12px; }
+    .pill.ok { background:#e8f5e9; color:#2e7d32; }
+    .pill.warn { background:#fff8e1; color:#8d6e63; }
+    .pill.bad { background:#ffebee; color:#c62828; }
+    .meta { color:#666; font-size: 12px; }
+    .grid { display:grid; grid-template-columns: repeat(2, minmax(240px, 1fr)); gap: 16px; }
+    .card { border:1px solid #eee; border-radius: 8px; padding: 12px; }
+    img { max-width: 100%; height: auto; border: 0; }
+    a { color: #1565c0; text-decoration: none; }
+    a:hover { text-decoration: underline; }
+  </style>
+</head>
+<body>
+
+<h2>Gating Summary (Recent Window)</h2>
+<p class="meta">
+      As-of: 2026-03-02 &middot; Model: v0.0.0
+      &middot; cfg: NA &middot; commit: 
+    </p>
+<table>
+  <thead><tr><th>Metric</th><th>Value</th><th>Status</th></tr></thead>
+  <tbody><tr><td>rmse_pp</td><td>1.536</td><td><span class="pill ok">OK</span></td></tr><tr><td>mae_pp</td><td>1.536</td><td><span class="pill ok">OK</span></td></tr><tr><td>smape</td><td>7.155</td><td><span class="pill ok">OK</span></td></tr><tr><td>mase</td><td>nan</td><td><span class="pill warn">WARN</span></td></tr><tr><td>r2_log</td><td>nan</td><td><span class="pill warn">WARN</span></td></tr></tbody>
+</table>
+
+</body>
+</html>
