@@ -93,8 +93,7 @@ results/
 .env
 *.env
 secrets/
-config.yaml
-config.yml
+
 
 # =========================
 

@@ -1,0 +1,213 @@
+data_folder: data
+models_folder: data/interim/models
+reports_folder: reports
+print_metrics: true
+print_forecast: true
+min_rows_after_lag: 100
+early_stopping_rounds: 200
+grid_search:
+  gdp_midas:
+    enabled: true
+    months_grid:
+    - 6
+    - 9
+    - 12
+    - 18
+    beta_grid:
+    - - 2.0
+      - 2.0
+    - - 3.0
+      - 4.5
+    - - 4.0
+      - 6.0
+    - - 6.0
+      - 2.0
+    horizons:
+    - 0
+    - 1
+    - 3
+    - 6
+    max_candidates: null
+    cv_mode: tscv
+    cv_n_splits: 3
+    early_stopping_rounds: 1
+sc_midas_ols:
+  alpha: 0.01
+  ar_lags: 3
+  gdp_lags: 4
+  degu_lags: 4
+  cblr_lags: 4
+  gla_lags: 4
+  include_const: true
+  alpha_per_horizon:
+    '3': 0.015
+    '4': 0.02
+    '5': 0.02
+    '6': 0.02
+random_state: 42
+model_type_per_horizon:
+  '0': midas_ml
+  '1': midas_ml
+  '2': midas_ml
+  '3': sc_midas_ols
+  '4': sc_midas_ols
+  '5': sc_midas_ols
+  '6': sc_midas_ols
+model_type: midas_ml
+horizons:
+- 0
+- 1
+- 2
+- 3
+- 4
+- 5
+- 6
+target_col: y_target
+features:
+  npl_auto_lags: 12
+  hi_freq_lags: 6
+  gdp_months: 9
+  beta_shape:
+  - 6.0
+  - 2.0
+  add_rolling_windows: true
+  rolling_windows:
+  - 3
+  - 6
+  scoring_entrypoint: auto
+lgbm:
+  objective: huber
+  reg_alpha: 0.05
+  reg_lambda: 0.5
+  min_split_gain: 0.0
+  alpha: 0.9
+  metric: l1
+  learning_rate: 0.02
+  n_estimators: 2000
+  num_leaves: 63
+  min_child_samples: 15
+  subsample: 0.8
+  colsample_bytree: 0.85
+  min_sum_hessian_in_leaf: 0.001
+  max_depth: -1
+  max_bin: 511
+  force_col_wise: true
+  feature_pre_filter: false
+  bagging_fraction: 0.8
+  bagging_freq: 1
+  feature_fraction: 0.8
+  early_stopping_rounds: 1
+ridge:
+  alpha: 1.0
+seed: 42
+cv:
+  n_splits: 5
+  folds: 5
+  rolling_origin_backtest: true
+  min_train_points: 84
+  min_valid_points: 12
+  backtest_step: 1
+test:
+  window_months: 12
+gates:
+  strick: false
+  h0:
+    rmse_pp_max: 1.2
+    mae_pp_max: 1.2
+    smape_max: 7.0
+    r2_log_min: 0.2
+  h3:
+    rmse_pp_max: 2.2
+    mae_pp_max: 1.7
+    smape_max: 9.0
+    r2_log_min: 0.25
+  h6:
+    rmse_pp_max: 2.8
+    mae_pp_max: 2.2
+    smape_max: 12.0
+    r2_log_min: 0.05
+optuna:
+  enabled: true
+  trials: 60
+  n_trials: 120
+  timeout: null
+  timeout_sec: null
+  direction: minimize
+  cv_mode: tscv
+  cv_n_splits: 3
+  early_stopping_rounds: 1
+forecast_guardrails:
+  enabled: false
+  max_monthly_drop_pp: 0.8
+  max_monthly_rise_pp: 2.5
+  use_hist_percentile: true
+  hist_percentile: 0.975
+  smooth_alpha: 0.15
+training:
+  recency_weighting:
+    enabled: true
+    half_life_months: 24
+    min_weight: 0.2
+monitoring:
+  print_metrics: true
+  min_train_rows: 60
+  backtest_step: 1
+  importance:
+    perm_metric: mae_pp
+    perm_repeats: 5
+    lgbm:
+      compute_permutation: false
+    ols:
+      compute_permutation: true
+  forecast_guard:
+    max_monthly_change_pp: 1.5
+    smooth_if_jump_pp: 2.0
+  thresholds:
+    rmse_pp_max: 3.0
+    mae_pp_max: 2.5
+    smape_max: 30.0
+    mase_max: 1.0
+    r2_log_min: 0.2
+  gate_window: 36
+npl:
+  ln_column_override: ''
+  value_column_override: ''
+  value_unit_override: ''
+dq_thresholds:
+  missing_months_max: 0
+  duplicates_max: 0
+  nan_max: 0
+  inf_max: 0
+  adf_pvalue_max: 0.1
+database:
+  server: localhost
+  database: DBG_DATA_TEST
+  username: awc_sql
+  password: AwC@2023
+  driver: SQL Server
+  trust_server_certificate: true
+  outliers:
+    enabled: true
+    hampel_cols:
+    - DEGU
+    - GLA
+    - CBLR
+    hampel_window: 9
+    hampel_k: 3.5
+    hampel_center: false
+    winsor_lower_q: 0.01
+    winsor_upper_q: 0.99
+models_registry:
+  candidate_subdir: candidate
+  approved_subdir: approved
+  pointer_file: LATEST_APPROVED.json
+forecast_to_sql: true
+forecast_table: t_npl_forecasts
+train_run_table: t_npl_train_runs
+cv_pred_table: t_npl_cv_predictions
+train_run_log_pro: t_npl_train_run_log
+bias_correction:
+  enabled: true
+  method: median
+  window_points: 12
+  min_points: 6
