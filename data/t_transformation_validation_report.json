@@ -1,0 +1,36 @@
+{
+  "run_id": "caa13eed-ada1-457e-ab65-6fe1f7136e86",
+  "run_ts": "2026-03-02T14:46:07.025268",
+  "all_pass": false,
+  "env": {
+    "timestamp": "2026-03-02T14:46:06.991373",
+    "python": "3.13.0 (tags/v3.13.0:60403a5, Oct  7 2024, 09:38:07) [MSC v.1941 64 bit (AMD64)]",
+    "pandas": "2.3.2",
+    "numpy": "2.3.3",
+    "platform": "Windows-11-10.0.22000-SP0",
+    "root": "D:\\NPL Project\\AI Project",
+    "data_dir": "D:\\NPL Project\\AI Project\\data",
+    "reports_dir": "D:\\NPL Project\\AI Project\\reports",
+    "adf_available": true,
+    "series_checked": [
+      "NPL",
+      "GDP",
+      "DEGU",
+      "CBLR",
+      "GLA"
+    ]
+  },
+  "thresholds": {
+    "missing_months_max": 0,
+    "duplicates_max": 0,
+    "nan_max": 0,
+    "inf_max": 0,
+    "adf_pvalue_max": 0.1
+  },
+  "counts": {
+    "rows": 60,
+    "flagged_checks": 31,
+    "failed_checks": 1
+  },
+  "error": null
+}

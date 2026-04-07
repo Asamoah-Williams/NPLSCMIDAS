@@ -1,0 +1,30 @@
+{
+  "run_id": "e19d1939-2dec-4d31-80f2-ee2a5e56b427",
+  "run_ts": "2026-02-05T11:59:48.345843",
+  "all_pass": false,
+  "env": {
+    "timestamp": "2026-02-05T11:59:48.298036",
+    "python": "3.13.11 (tags/v3.13.11:6278944, Dec  5 2025, 16:26:58) [MSC v.1944 64 bit (AMD64)]",
+    "pandas": "3.0.0",
+    "numpy": "2.4.1",
+    "platform": "Windows-11-10.0.26200-SP0",
+    "root": "C:\\Microlynxe International\\AWC\\AI Project Deployment\\AI Project\\npl_src",
+    "data_dir": "C:\\Microlynxe International\\AWC\\AI Project Deployment\\AI Project\\npl_src\\data",
+    "reports_dir": "C:\\Microlynxe International\\AWC\\AI Project Deployment\\AI Project\\npl_src\\reports",
+    "adf_available": true,
+    "series_checked": [
+      "NPL",
+      "GDP",
+      "DEGU",
+      "CBLR",
+      "GLA"
+    ]
+  },
+  "thresholds": {},
+  "counts": {
+    "rows": 1,
+    "flagged_checks": 1,
+    "failed_checks": 1
+  },
+  "error": "No transformed series found. Run data_transformation.py first."
+}

@@ -1,0 +1,16 @@
+{
+  "cv_nrmse": 0.05671267583966255,
+  "holdout_rmse": 0.38687156606022527,
+  "holdout_mae": 0.3483896851228998,
+  "holdout_mape": 0.0657121717703223,
+  "holdout_r2": 0.8474610941878086,
+  "best_params": {
+    "n_estimators": 1075,
+    "learning_rate": 0.05180085516785321,
+    "max_depth": 4,
+    "subsample": 0.6376684685770965,
+    "colsample_bytree": 0.6860631548970079,
+    "reg_alpha": 0.1108647628290288,
+    "reg_lambda": 2.105927900769455
+  }
+}

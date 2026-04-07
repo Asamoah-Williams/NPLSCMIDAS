@@ -38,7 +38,7 @@ env/
 
 # Ignore large datasets
 
-data/
+
 datasets/
 *.csv
 *.xlsx
